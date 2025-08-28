@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Data Security and Governance for the AI Era</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white-100 font-sans">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- White space after navbar -->
+  <div class="h-6"></div>
+
+  <!-- Hero Banner -->
+  <div class="relative max-w-5xl mx-auto">
+    <img src="assets/images/image3.png" alt="Banner" class="w-full h-45 object-cover shadow">
+  </div>
+
+  <!-- Partner Logos -->
+  <div class="relative max-w-5xl mx-auto my-6">
+    <img src="assets/images/image4.png" alt="Logos" class="w-full h-20 object-contain">
+  </div>
+
+  <!-- Main Container -->
+  <div class="max-w-5xl mx-auto bg-white  mt-6 p-8 rounded">
+
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-center mb-6 text-gray-800 leading-snug">
+      Data Security and Governance for the AI Era
+    </h1>
+
+    <!-- Register Button -->
+    <div class="flex justify-center mb-10">
+      <button id="registerBtn" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 font-bold rounded">
+        REGISTER NOW
+      </button>
+    </div>
+
+    <!-- Content -->
+    <div class="text-gray-800 space-y-4">
+
+      <p>
+        AI is changing how organizations use data, but it’s also creating new risks along the way.
+        Sensitive data is flowing into model pipelines, training sets, third-party APIs and generative
+        outputs. From data leaks in large language models to regulatory scrutiny around AI decision-making,
+        the stakes are getting higher. Traditional security frameworks weren’t built for this.
+        Likewise, governance models need a rethink.
+      </p>
+
+      <p>
+        Join us for a special roundtable webinar on <b>September 11th</b> on how to modernize your data
+        strategy for the AI era. You’ll get clear, actionable strategies for protecting sensitive data,
+        ensuring responsible AI usage, and maintaining compliance in a fast-moving landscape.
+      </p>
+
+      <h2 class="font-semibold mt-4">You'll learn:</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>How AI changes the data risk landscape</li>
+        <li>Key governance frameworks for AI-powered systems</li>
+        <li>Managing sensitive data in training and inference workflows</li>
+        <li>Compliance, transparency, and auditability in the AI lifecycle</li>
+        <li>Tools and best practices for scalable, enforceable governance</li>
+      </ul>
+
+      <p class="font-semibold">Reserve your seat today!</p>
+
+      <!-- Clickable REGISTER NOW text -->
+      <p>
+        <span id="registerText" class="text-red-600 font-bold cursor-pointer hover:underline">REGISTER NOW</span>
+        <span> to attend the webinar </span>
+        <span class="font-bold">Data Security and Governance for the AI Era.</span>
+      </p>
+
+      <p class="font-semibold">
+        Don’t miss this live event on <span class="font-bold">Thursday, September 11, 11 AM PT / 2 PM ET.</span>
+      </p>
+    </div>
+
+
+    <!-- Speakers + Moderator -->
+    <div class="mt-12">
+      <div class="grid grid-cols-1 md:grid-cols-3  gap-10 text-center">
+
+        <!-- Speaker 1 -->
+        <div>
+          <span class="text-red-600 font-bold text-xs block mb-2">SPEAKER</span>
+          <img src="assets/images/image5.png" alt="Speaker" class="w-24 h-24 mx-auto rounded-full border mb-3">
+          <p class="font-semibold">Steve Karam</p>
+          <p class="text-sm text-gray-600">
+            Principal Product Manager,<br>AI, SaaS, and Growth<br>Delphix
+          </p>
+        </div>
+
+        <!-- Speaker 2 -->
+        <div>
+          <span class="block mb-2 invisible">.</span>
+          <img src="assets/images/image6.png" alt="Speaker" class="w-24 h-24 mx-auto rounded-full border mb-3">
+          <p class="font-semibold">Sami Akbay</p>
+          <p class="text-sm text-gray-600">
+            VP, Product Management<br>insightsoftware
+          </p>
+        </div>
+
+
+        <!-- Moderator -->
+        <div>
+          <span class="text-red-600 font-bold text-xs block mb-2">MODERATOR</span>
+          <img src="assets/images/image7.png" alt="Moderator" class="w-24 h-24 mx-auto rounded-full border mb-3">
+          <p class="font-semibold">Stephen Faig</p>
+          <p class="text-sm text-gray-600">
+            Research Director<br>Unisphere Research and DBTA
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+
+  <!-- JS -->
+  <script>
+    // Load navbar and footer
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+    // Register Now actions
+    function goRegister() {
+      window.open('register.html', '_blank');
+    }
+
+    document.getElementById('registerBtn').addEventListener('click', goRegister);
+    document.getElementById('registerText').addEventListener('click', goRegister);
+  </script>
+
+</body>
+
+</html>
