@@ -17,7 +17,7 @@
 
   <!-- Hero Banner -->
   <div class="relative max-w-5xl mx-auto">
-    <img src="assets/images/image14a.png" alt="Banner" class="w-full h-45  object-cover">
+    <img src="assets/images/image14a.png" alt="Banner" class="w-full h-45 object-cover">
   </div>
 
   <!-- Content Section -->
@@ -27,16 +27,20 @@
     <div class="md:col-span-2 text-gray-800 space-y-4">
 
       <!-- Title -->
-      <h1 class="text-2xl md:text-3xl font-bold leading-snug">
+      <h1 class="text-2xl md:text-3xl font-semibold leading-snug">
         Unlocking Unstructured Data with GenAI
       </h1>
 
-      <!-- Register Button -->
-      <div class="flex justify-center mb-10">
+        <div class="h-2"></div>
+
+      <!-- Register Button with more spacing -->
+      <div class="flex justify-center">
         <button id="registerBtn" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 font-bold rounded">
           REGISTER NOW
         </button>
       </div>
+
+        <div class="h-2"></div>
 
       <!-- Paragraphs -->
       <p>
@@ -44,8 +48,7 @@
         the rapid growth of unstructured data – such as product manuals and knowledge bases – the right information
         architecture is essential for uncovering, understanding, and leveraging these assets for effective data-driven
         decision-making. A well-designed foundation enables an enterprise to leverage GenAI to unlock its data and
-        deliver
-        insights that are accurate, reliable, and actionable, empowering both internal teams and external customers.
+        deliver insights that are accurate, reliable, and actionable, empowering both internal teams and external customers.
       </p>
 
       <p>
@@ -88,7 +91,7 @@
       <div>
         <span class="text-purple-700 font-bold text-xs block mb-2">SPEAKERS</span>
         <img src="assets/images/image14b.png" alt="Doug Johnson"
-          class="w-24 h-24 mx-auto md:mx-0 rounded-full border mb-3">
+          class="w-24 h-24 mx-auto md:mx-0 mb-3">
         <p class="font-semibold">Doug Johnson</p>
         <p class="text-sm text-gray-600">Vice President of Product Management<br>Rocket Software</p>
       </div>
@@ -96,7 +99,7 @@
       <!-- Speaker 2 -->
       <div>
         <img src="assets/images/image14c.png" alt="Greg Wilson"
-          class="w-24 h-24 mx-auto md:mx-0 rounded-full border mb-3">
+          class="w-24 h-24 mx-auto md:mx-0 mb-3">
         <p class="font-semibold">Greg Wilson</p>
         <p class="text-sm text-gray-600">Content Services for the Americas<br>Rocket Software</p>
       </div>
@@ -105,7 +108,7 @@
       <div>
         <span class="text-purple-700 font-bold text-xs block mb-2">MODERATOR</span>
         <img src="assets/images/image14d.png" alt="Stephen Faig"
-          class="w-24 h-24 mx-auto md:mx-0 rounded-full border mb-3">
+          class="w-24 h-24 mx-auto md:mx-0 mb-3">
         <p class="font-semibold">Stephen Faig</p>
         <p class="text-sm text-gray-600">Research Director<br>Unisphere Research and DBTA</p>
       </div>
@@ -118,7 +121,6 @@
 
   <!-- JS -->
   <script>
-
     // Load navbar and footer
     fetch('navbar.html')
       .then(res => res.text())
@@ -132,12 +134,10 @@
     function goRegister() {
       window.open('register.html', '_blank');
     }
-  
 
     document.getElementById('registerBtn').addEventListener('click', goRegister);
     document.getElementById('registerText').addEventListener('click', goRegister);
   </script>
 
 </body>
-
 </html>
