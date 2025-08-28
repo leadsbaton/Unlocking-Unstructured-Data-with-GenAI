@@ -9,46 +9,40 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white-100 font-sans">
+<body class="bg-white-50 font-sans">
 
+  <!-- Navbar -->
   <div id="navbar"></div>
-  <!-- White space after navbar -->
-  <div class="h-6"></div>
+  <div class="h-6"></div> <!-- White space after navbar -->
 
   <!-- Hero Banner -->
   <div class="relative max-w-5xl mx-auto">
-    <img src="assets/images/image14a.png" alt="Banner" class="w-full h-45 object-cover">
+    <img src="assets/images/image14a.png" alt="Banner" class="w-full h-45 object-cover rounded-sm">
   </div>
 
-  <!-- Content Section -->
-  <div class="max-w-5xl mx-auto bg-white shadow-md mt-6 p-6 md:p-10 rounded grid grid-cols-1 md:grid-cols-3 gap-8">
+  <!-- Title + Register (only once, top center) -->
+  <div class="max-w-5xl mx-auto mt-6 p-6 md:p-10 text-center">
+    <h1 class="text-2xl md:text-3xl font-semibold leading-snug">
+      Unlocking Unstructured Data with GenAI
+    </h1>
 
-    <!-- Left Content -->
-    <div class="md:col-span-2 text-gray-800 space-y-4">
+    <div class="flex justify-center mt-6">
+      <button id="registerBtn" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 font-bold rounded">
+        REGISTER NOW
+      </button>
+    </div>
+  </div>
 
-      <!-- Title -->
-      <h1 class="text-2xl md:text-3xl font-semibold leading-snug">
-        Unlocking Unstructured Data with GenAI
-      </h1>
+  <!-- Main Grid (Content + Speakers) -->
+  <div class="max-w-5xl mx-auto bg-white p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-10">
 
-        <div class="h-2"></div>
-
-      <!-- Register Button with more spacing -->
-      <div class="flex justify-center">
-        <button id="registerBtn" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 font-bold rounded">
-          REGISTER NOW
-        </button>
-      </div>
-
-        <div class="h-2"></div>
-
-      <!-- Paragraphs -->
+    <!-- Left Section: Content -->
+    <div class="md:col-span-2 text-gray-800 space-y-5">
       <p>
         GenAI is revolutionizing how organizations and their customers access, use, and interact with information. With
         the rapid growth of unstructured data – such as product manuals and knowledge bases – the right information
         architecture is essential for uncovering, understanding, and leveraging these assets for effective data-driven
-        decision-making. A well-designed foundation enables an enterprise to leverage GenAI to unlock its data and
-        deliver insights that are accurate, reliable, and actionable, empowering both internal teams and external customers.
+        decision-making.
       </p>
 
       <p>
@@ -64,7 +58,7 @@
         <li><strong>Cost Management:</strong> Adopt strategies to manage costs across the information lifecycle.</li>
       </ul>
 
-      <h2 class="font-semibold mt-4">Key Takeaways:</h2>
+      <h2 class="font-semibold mt-6">Key Takeaways:</h2>
       <ul class="list-disc pl-6 space-y-2">
         <li>Practical approaches to integrate diverse data types and formats for streamlined access and usability.</li>
         <li>Effective tools and techniques to control hidden costs and simplify processes.</li>
@@ -76,7 +70,6 @@
         Don’t miss this live event on <span class="font-bold">Wednesday, September 10, 11 AM PT / 2 PM ET.</span>
       </p>
 
-      <!-- Clickable REGISTER NOW text -->
       <p>
         <span id="registerText" class="text-red-600 font-bold cursor-pointer hover:underline">REGISTER NOW</span>
         <span> to attend the webinar </span>
@@ -84,11 +77,11 @@
       </p>
     </div>
 
-    <!-- Right Speakers -->
-    <div class="space-y-10 text-center md:text-left">
+    <!-- Right Section: Speakers -->
+    <div class="space-y-12 text-center md:text-left">
 
       <!-- Speaker 1 -->
-      <div>
+      <div class="pt-2">
         <span class="text-purple-700 font-bold text-xs block mb-2">SPEAKERS</span>
         <img src="assets/images/image14b.png" alt="Doug Johnson"
           class="w-24 h-24 mx-auto md:mx-0 mb-3">
@@ -97,7 +90,7 @@
       </div>
 
       <!-- Speaker 2 -->
-      <div>
+      <div class="pt-2">
         <img src="assets/images/image14c.png" alt="Greg Wilson"
           class="w-24 h-24 mx-auto md:mx-0 mb-3">
         <p class="font-semibold">Greg Wilson</p>
@@ -105,7 +98,7 @@
       </div>
 
       <!-- Moderator -->
-      <div>
+      <div class="pt-2">
         <span class="text-purple-700 font-bold text-xs block mb-2">MODERATOR</span>
         <img src="assets/images/image14d.png" alt="Stephen Faig"
           class="w-24 h-24 mx-auto md:mx-0 mb-3">
@@ -117,7 +110,7 @@
   </div>
 
   <!-- Footer -->
-  <div id="footer"></div>
+  <div id="footer" class="mt-10"></div>
 
   <!-- JS -->
   <script>
@@ -130,7 +123,7 @@
       .then(res => res.text())
       .then(data => document.getElementById('footer').innerHTML = data);
 
-    // Register Now actions
+    // Register actions
     function goRegister() {
       window.open('register.html', '_blank');
     }
